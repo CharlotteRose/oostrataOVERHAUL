@@ -1,15 +1,19 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
 1441598797 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\pcbstruct.cpp
 	"pcbStruct.H"
+=======
+1441594820 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\pcbstruct.cpp
+	"pcbStruct.h"
+>>>>>>> parent of df4077c... Beginning of PCB
 	<iostream>
 	<string>
 
-1441598489 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\main.cpp
+1441596380 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\main.cpp
 	"pcbStruct.h"
 	<iostream>
 	<string>
 
-1441598753 c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\pcbstruct.h
+1441595999 c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\pcbstruct.h
 	<string>
-	<vector>
 

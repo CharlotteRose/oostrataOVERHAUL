@@ -1,7 +1,6 @@
 #ifndef PCBSTRUCT_H
 #define PCBSTRUCT_H
 #include <string>
-#include <vector>
 
 class pcbStruct{
 
@@ -12,11 +11,12 @@ public:
     std::string freePCB(pcbStruct* );
     pcbStruct* setUpPCB(std::string pName, int priority, int pClass); //note the
     pcbStruct* findPCB(std::string pName);
-    void getProcessInfo();
+    void addProcessName(std::string pName);
+    void deleteProcessName(std::string pName);
 
 private:
     std::string processName;
-    int processClass;
+    std::string processClass;
     int priorityOfProcess;
     int memoryNeeded;
     bool stateOfProcess;
