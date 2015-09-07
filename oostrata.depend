@@ -1,21 +1,16 @@
 # depslib dependency file v1.0
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-1441598797 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\pcbstruct.cpp
+2 ÿÿÿŒ-:
+
+1441594820 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\pcbstruct.cpp
 	"pcbStruct.H"
-=======
-1441594820 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\pcbstruct.cpp
 	"pcbStruct.h"
->>>>>>> parent of df4077c... Beginning of PCB
-=======
-1441594820 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\pcbstruct.cpp
 	"pcbStruct.h"
->>>>>>> parent of df4077c... Beginning of PCB
-=======
-1441594820 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\pcbstruct.cpp
 	"pcbStruct.h"
->>>>>>> parent of df4077c... Beginning of PCB
+	"pcbStruct.h"
+
+1441598797 .H"
+
+1441594820 ent of df4077c... Beginning of PCB
 	<iostream>
 	<string>
 
@@ -25,5 +20,18 @@
 	<string>
 
 1441595999 c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\pcbstruct.h
+	<string>
+
+1441665592 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\oostrataoverhaul\main.cpp
+	"pcbStruct.h"
+	<iostream>
+	<string>
+
+1441665525 c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\oostrataoverhaul\pcbstruct.h
+	<string>
+
+1441663488 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\oostrataoverhaul\pcbstruct.cpp
+	"pcbStruct.H"
+	<iostream>
 	<string>
 

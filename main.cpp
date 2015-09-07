@@ -10,6 +10,8 @@ int main(){
 
     std::cout << "Greetings this is a test" << std::endl;
     pcbStruct* newTestStruct = new pcbStruct();
-    newTestStruct->addProcessName("p.0.0.1")
-; return 0;
+    newTestStruct->processInfo();
+
+ return 0;
 }
+
