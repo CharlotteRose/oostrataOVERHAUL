@@ -21,12 +21,12 @@ private:
     pcbStruct* next;
 };*/
 
-pcbStruct::pcbStruct()
+pcbStruct::pcbStruct():
+     processName("Error"), processClass(0), priorityOfProcess(0),memoryNeeded(0),stateOfProcess(false), next(0)
     {}
 pcbStruct::~pcbStruct()
     {}
-sdfddd
-    // void addProcessName(std::string pName);
-void pcbStruct::addProcessName(std::string pName){
-    processName = pName;
+void pcbStruct::getProcessInfo(){
+    std::cout << "Process Name: " << processName << std::endl;
 }
+
