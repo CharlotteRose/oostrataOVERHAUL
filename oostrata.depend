@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1441594820 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\pcbstruct.cpp
+	"pcbStruct.h"
+	<iostream>
+	<string>
+
+1441596380 source:c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\main.cpp
+	"pcbStruct.h"
+	<iostream>
+	<string>
+
+1441595999 c:\users\cheech wife\desktop\fall 2015\cs361\ch1\chapter1_operatingsystems_book_code\oostrata\pcbstruct.h
+	<string>
+
