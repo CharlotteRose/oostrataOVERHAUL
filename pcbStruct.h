@@ -7,7 +7,7 @@ class pcbStruct{
 public:
     pcbStruct();
     ~pcbStruct();
-    void setPName(std::string pName);
+    void setPName();
     void setPClass(int pClass);
     void setPPriority(int pPriority);
     void setMemory(int pMemory);
