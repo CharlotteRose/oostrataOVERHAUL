@@ -6,24 +6,18 @@ class pcbStruct{
 
 public:
     pcbStruct();
-    ~pcbStruct();
-    void setPName();
-    void setPClass(int pClass);
-    void setPPriority(int pPriority);
-    void setMemory(int pMemory);
-    void setState(int pState);
+    virtual ~pcbStruct();
+    void setPName(std::string);
+    void setPClass(int);
+    void setPPriority(int);
+    void setMemory(int);
+    void setState(int);
     void setNext(pcbStruct*);
-
-    pcbStruct* allocatePCB();
-    std::string freePCB(pcbStruct* );
-    pcbStruct* setUpPCB(std::string pName, int priority, int pClass); //note the
-    pcbStruct* findPCB(std::string pName);
-
     void processInfo();
 
 private:
     std::string processName;
-    std::string processClass;
+    int processClass;
     int priorityOfProcess;
     int memoryNeeded;
     int stateOfProcess;

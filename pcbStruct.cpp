@@ -2,30 +2,19 @@
 #include <iostream>
 #include <string>
 
-pcbStruct::pcbStruct()
+pcbStruct::pcbStruct():
+    next(0)
     {
-        int populace = 0;
-        setPName();
-        setPClass();
-
     }
 
 pcbStruct::~pcbStruct()
     {}
 
-void pcbStruct::setPName(){
-    std::string pName;
-    std::cout << "Please enter Process Name" << std::endl;
-    std::cin >> pName;
-    while (std::string::npos != pName.find_first_of("0123456789")){
-        std::cin.clear();
-        std::cout << "Please enter a valid name. No digits." << std::endl;
-        std::cin >> pName;
-    }
+void pcbStruct::setPName(std::string pName){
     processName = pName;
 }
 
-void pcbStruct::setPClass(){
+void pcbStruct::setPClass(int pClass){
 
     processClass = pClass;
 }
@@ -38,20 +27,13 @@ void pcbStruct::setMemory(int pMemory){
     memoryNeeded = pMemory;
 }
 
-void pcbStruct::setState(bool pState){
+void pcbStruct::setState(int pState){
     stateOfProcess = pState;
 }
 
 void pcbStruct::setNext(pcbStruct* nextP){
     next = nextP;
 }
-
-    //pcbStruct* allocatePCB();
-    //std::string freePCB(pcbStruct* );
-pcbStruct* setUpPCB(std::string pName, int priority, int pClass, int pPriority, int pMemory, bool pState){
-    if
-}
-    //pcbStruct* findPCB(std::string pName);
 
 void pcbStruct::processInfo(){
     std::cout << "Process Name: " << processName << std::endl;
