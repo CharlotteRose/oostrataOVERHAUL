@@ -13,6 +13,9 @@ int main(){
  return 0;
 }
 
+
+
+
 /* Intended logical flow
 >Menu controls user view
 >users input selection criterion (handled by menuOption)
@@ -37,8 +40,8 @@ void runProcess(int option){
         std::cout << "PCB creation requires input data: Name, Priority, Class. '\n'";
         std::cout << "Enter 'YES' to continue, 'NO' to exit.";
         std::cin>> confirm;
-        if(confirm == "YES","Yes", "yes")  {
-
+        if(confirm == "YES","Yes", "yes"){
+                //get and validate information
 
         }
         else{
