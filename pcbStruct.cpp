@@ -6,6 +6,7 @@ pcbStruct::pcbStruct()
     {
         int populace = 0;
         setPName();
+        setPClass();
 
     }
 
@@ -24,7 +25,8 @@ void pcbStruct::setPName(){
     processName = pName;
 }
 
-void pcbStruct::setPClass(int pClass){
+void pcbStruct::setPClass(){
+
     processClass = pClass;
 }
 
@@ -46,7 +48,9 @@ void pcbStruct::setNext(pcbStruct* nextP){
 
     //pcbStruct* allocatePCB();
     //std::string freePCB(pcbStruct* );
-    //pcbStruct* setUpPCB(std::string pName, int priority, int pClass); //note the
+pcbStruct* setUpPCB(std::string pName, int priority, int pClass, int pPriority, int pMemory, bool pState){
+    if
+}
     //pcbStruct* findPCB(std::string pName);
 
 void pcbStruct::processInfo(){

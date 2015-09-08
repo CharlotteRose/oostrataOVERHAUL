@@ -11,7 +11,7 @@ public:
     void setPClass(int pClass);
     void setPPriority(int pPriority);
     void setMemory(int pMemory);
-    void setState(bool pState);
+    void setState(int pState);
     void setNext(pcbStruct*);
 
     pcbStruct* allocatePCB();
@@ -26,7 +26,7 @@ private:
     std::string processClass;
     int priorityOfProcess;
     int memoryNeeded;
-    bool stateOfProcess;
+    int stateOfProcess;
     pcbStruct* next;
 };
 #endif // PCBSTRUCT_H
