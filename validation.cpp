@@ -2,6 +2,10 @@
 #include <iostream>
 
 validation::validation():
-    passedAllChecks(false)
+    passedAllChecks(0)
+{
+}
+
+validation::~validation()
 {
 }

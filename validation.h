@@ -11,7 +11,7 @@ public:
     int getInt();
 
 private:
-    bool passedAllChecks;
+    int passedAllChecks;
 };
 
 #endif // VALIDATION_H
