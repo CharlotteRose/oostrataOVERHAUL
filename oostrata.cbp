@@ -33,11 +33,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="invoker.cpp" />
+		<Unit filename="invoker.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="pcbController.cpp" />
 		<Unit filename="pcbController.h" />
 		<Unit filename="pcbStruct.cpp" />
 		<Unit filename="pcbStruct.h" />
+		<Unit filename="request.H" />
+		<Unit filename="request.cpp" />
 		<Unit filename="validation.cpp" />
 		<Unit filename="validation.h" />
 		<Extensions>

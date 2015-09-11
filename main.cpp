@@ -2,19 +2,26 @@
 #include <iostream>
 #include <string>
 
+void ClearScreen();
 
 int main(){
     //std::cout <<"Hello World" << std::endl;
     request newR;
-
+    ClearScreen();
     int go = 0;
     while (go!= 77){
         go = newR.getRequest();
     }
+    ClearScreen();
+
  return 0;
 }
 
 
+void ClearScreen()
+    {
+        std::cout << std::string( 1000, '\n' );
+    }
 
 
 /* Intended logical flow
