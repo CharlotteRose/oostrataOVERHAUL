@@ -6,7 +6,9 @@ class invoker{
 public:
         invoker();
         ~invoker();
-        evaluateRequest(*);
+        int evaluateRequest(int);
+        bool isSystemRequest(int);
+        bool isPCBRequest(int);
 
 private:
     int uChoice;

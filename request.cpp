@@ -16,10 +16,12 @@ int request::getRequest(){
         std::cout << " 1. System Information\n 2. PCB Settings\n 3. Exit\n" << std::endl;
         std::cin >> currentOption;
         if (currentOption == 1){
+            ClearScreen();
             rType = "System";
             return 1;
         }
         else if (currentOption == 2){
+            ClearScreen();
             rType = "PCB";
             return 2;
         }
@@ -28,6 +30,7 @@ int request::getRequest(){
             std::cout << " Please type in 'Yes' to confirm exit of OOSTRTA.\n Press any key to return to Home menu\n\n" << std::endl;
             std::cin >> confirmExit;
             if(confirmExit == "YES"||confirmExit == "Yes"||confirmExit == "yes"){
+                ClearScreen();
                 std::cout <<"\n\n";
                 //std::cout <<"tito was gangster";
                 return 77; //dummy value I can confidently say we will not reach in menu options
@@ -42,10 +45,13 @@ int request::getRequest(){
             std::cout << "Invalid Option\n\n\n\n";
             currentOption =0;
         }
-
     }
 }
 
 void request::displayRequest(){
     std::cout << rType << std::endl;
+}
+
+void request::ClearScreen(){
+    std::cout << std::string( 1000, '\n' );
 }

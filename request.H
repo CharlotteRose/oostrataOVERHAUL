@@ -10,6 +10,7 @@ public:
     ~request();
     int getRequest();
     void displayRequest();
+    void ClearScreen();
 private:
     std::string rType;
 };
