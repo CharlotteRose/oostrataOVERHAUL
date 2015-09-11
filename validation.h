@@ -2,6 +2,8 @@
 #define VALIDATION_H
 #include <string>
 
+// I am using uName to identify User input of type (name).
+
 class validation{
 
 public:
@@ -11,7 +13,8 @@ public:
     int getInt();
 
 private:
-    int passedAllChecks;
+    std::string uString;
+    int uInt;
 };
 
 #endif // VALIDATION_H
