@@ -9,6 +9,7 @@ public:
         int evaluateRequest(int);
         bool isSystemRequest(int);
         bool isPCBRequest(int);
+        void showUchoice();
 
 private:
     int uChoice;

@@ -1,4 +1,5 @@
 #include "request.H"
+#include "invoker.h"
 #include <iostream>
 #include <string>
 
@@ -10,9 +11,8 @@ int main(){
     int go = 0;
     while (go!= 77){
         go = newR.getRequest();
-    }
-    invoker newI;
-    newI.uChoice(newR->rType);
+    };
+
 
  return 0;
 }
