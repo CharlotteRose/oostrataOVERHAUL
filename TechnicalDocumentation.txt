@@ -1,82 +1,116 @@
 Test Files:
 
-In the test files we are mimicking instacnces of program use. When we have created the instacnce
+In the test files, we are mimicking instances of program use. When we have created an instance
 of the class(program), we then run it and feed it dummy values to check to the output. 
 If the output matches the expected values then the method passes the test. 
 
 	//Declaration of class   					//Implementations
-Test Class:
-public:
-    									
-	pcbTest();						    {pcbStruct* test = new pcbStruct;}
-    
-	~pcbTest();							{}
-    
-	bool createsStruct();				
-    bool canPopulate();
-    bool canDelete();
-    bool testName(std::string pName);
-    bool testClass(int pClass);
-    bool testPriority(int pPriority);
-    bool testMemory(int pMemory);   
-    
-private:
-    pcbStruct* testStruct
-
+___________________________________________________________________________________
+|Test Class:                                                                      |
+|public:                                                                          |
+|   									                                          |
+|  pcbTest();						    {pcbStruct* test = new pcbStruct;}        |
+|                                                                                 |
+|	~pcbTest();							{}                                        |
+|                                                                                 |
+|	bool createsStruct();				                                          |
+|    bool canPopulate();                                                          |
+|    bool canDelete();                                                            |
+|    bool testName(std::string pName);                                            |
+|    bool testClass(int pClass);                                                  |
+|    bool testPriority(int pPriority);                                            |
+|    bool testMemory(int pMemory);                                                | 
+|    																			  |				
+|private:																		  |
+|    pcbStruct* testStruct														  |
+|_________________________________________________________________________________|
 	
 	
 Our entry point for contact with the PCB comes from the user electing to create a process.
  
  
 The Request Class:
-public:
-    request();
+PUBLIC:
+    REQUEST();
 		This is the standard constructor for the class.
-    ~request();
-		This is the standard destructor for the class. 
-    getRequest()  
+		
+    ~REQUEST();
+		This is the standard destructor for the class.
+		
+    GETREQUEST()  
 		This method interacts with the user to offer a menu of options to choose from. Their response is 
 		stored in the variable currentOption. 
-		int currentOption = 0;
-			The creation of this variable gives the 
-		while (currentOption == 0){
-			std::cout<< "Please choose from one of the following options:\n(Numeric values only) "<< std::endl;
-			std::cout << " 1. System Information\n 2. PCB Settings\n 3. Exit\n" << std::endl;
-			std::cin >> currentOption;
-			if (currentOption == 1){
-				ClearScreen();
-				rType = "System";
-				return 1;
+		
+		INT CURRENTOPTION = 0;
+			The creation of this variable gives a base condition to trigger the execution of the code 
+			inside of the preceding loop. 
+			
+		WHILE (CURRENTOPTION == 0){
+			Given the condition that currentOption was equal to ) the loop initiates a check sequence to 
+			test the user input and examine if it is valid. 
+		
+			STD::COUT<< "PLEASE CHOOSE FROM ONE OF THE FOLLOWING OPTIONS:\N(NUMERIC VALUES ONLY) "<< STD::ENDL;
+				The Screen print the above message and wait for the user to respond by offering input. 
+			
+			STD::COUT << " 1. SYSTEM INFORMATION\N 2. PCB SETTINGS\N 3. EXIT\N" << STD::ENDL;
+				At present these are the only options that a user can choose from. The users choice is then 
+				saved in the variable currentOption. 
+			
+			STD::CIN >> CURRENTOPTION;
+				currentOption is now equal to the users choice.				
+			
+			IF (CURRENTOPTION == 1){
+				The condition of currentOption being equal to 1 is checked. If they are equal
+				the following operations are preformed:
+				
+				CLEARSCREEN();
+					clearScreen is called to print a number of blank lines on the screen. 
+				RTYPE = "SYSTEM";
+					The property rType is then set the string value "system".
+				RETURN 1;
+					The getRequest method then terminates and returns the value 1. 
 			}
-			else if (currentOption == 2){
-				ClearScreen();
-				rType = "PCB";
-				return 2;
+			ELSE IF (CURRENTOPTION == 2){
+				If the former condition is not true the next condition, currentOption is equal to 2 in this case
+				is then checked. If they are equal the following operations are preformed:
+				
+				CLEARSCREEN();
+					clearScreen is called to print a number of blank lines on the screen. 
+				RTYPE = "PCB";
+					The property rType is then set the string value "PCB".
+				RETURN 2;
+					The getRequest method then terminates and returns the value 2. 				
 			}
-			else if (currentOption == 3){
-				std::string confirmExit = "";
-				std::cout << " Please type in 'Yes' to confirm exit of OOSTRTA.\n Press any key to return to Home menu\n\n" << std::endl;
-				std::cin >> confirmExit;
-				if(confirmExit == "YES"||confirmExit == "Yes"||confirmExit == "yes"){
-					ClearScreen();
-					std::cout <<"\n\n";
-					//std::cout <<"tito was gangster";
-					return 77; //dummy value I can confidently say we will not reach in menu options
+			ELSE IF (CURRENTOPTION == 3){
+				The next condition is checked if the previous two have failed. If this condition is true the 
+				following operations are preformed:
+				
+				STD::STRING CONFIRMEXIT = "";
+					The variable confirmExit is created to store user input. 
+					
+				STD::COUT << " PLEASE TYPE IN 'YES' TO CONFIRM EXIT OF OOSTRTA.\N PRESS ANY KEY TO RETURN TO HOME MENU\N\N" << STD::ENDL;
+					  
+				STD::CIN >> CONFIRMEXIT;
+				IF(CONFIRMEXIT == "YES"||CONFIRMEXIT == "YES"||CONFIRMEXIT == "YES"){
+					CLEARSCREEN();
+					STD::COUT <<"\N\N";
+					//STD::COUT <<"TITO WAS GANGSTER";
+					RETURN 77; //DUMMY VALUE I CAN CONFIDENTLY SAY WE WILL NOT REACH IN MENU OPTIONS
 				}
-				else{
-					//std::cout <<"tito was a gangster";
-					rType = "exit";
-					return 3;
+				ELSE{
+					//STD::COUT <<"TITO WAS A GANGSTER";
+					RTYPE = "EXIT";
+					RETURN 3;
 				}
 			}
-			else{
-				std::cout << "Invalid Option\n\n\n\n";
-				currentOption =0;
+			ELSE{
+				STD::COUT << "INVALID OPTION\N\N\N\N";
+				CURRENTOPTION =0;
 			}
 		}
 }
-    void displayRequest();
-		This method 
-    void ClearScreen();
-private:
-    std::string rType;
+    VOID DISPLAYREQUEST();
+		THIS METHOD 
+    VOID CLEARSCREEN();
+PRIVATE:
+    STD::STRING RTYPE;
