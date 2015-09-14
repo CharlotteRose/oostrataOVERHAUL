@@ -1,5 +1,8 @@
 #include "request.H"
 #include "validation.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 request::request():
     rType("None Set")
@@ -15,6 +18,13 @@ int request::getRequest(){
         std::cout<< "Please choose from one of the following options:\n(Numeric values only) "<< std::endl;
         std::cout << " 1. System Information\n 2. PCB Settings\n 3. Exit\n" << std::endl;
         std::cin >> currentOption;
+
+        while (!isdigit(currentOption)) {                       //Compliments of stack overflow user Commander Bubble
+        std::cout << "ERROR, enter a number" << std::endl;
+        std::cin.clear();
+        std::cin.ignore(256,'\n');
+        std::cin >> currentOption;
+        }
         if (currentOption == 1){
             ClearScreen();
             rType = "System";

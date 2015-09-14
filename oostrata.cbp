@@ -33,6 +33,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../../../../../../../Downloads/diagram.png" />
 		<Unit filename="invoker.cpp" />
 		<Unit filename="invoker.h" />
 		<Unit filename="main.cpp" />

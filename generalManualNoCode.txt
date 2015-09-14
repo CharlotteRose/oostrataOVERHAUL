@@ -30,114 +30,77 @@ Our entry point for contact with the PCB comes from the user electing to create 
  
  
 The Request Class:
-PUBLIC:
-    REQUEST();
-		This is the standard constructor for the class.
+
+		constructor for the class.
+
+		destructor for the class.
 		
-    ~REQUEST();
-		This is the standard destructor for the class.
-		
-    GETREQUEST()  
-		This method interacts with the user to offer a menu of options to choose from. Their response is 
+		}
+		Method interacts with the user to offer a menu of options to choose from. Their response is 
 		stored in the variable currentOption. 
 		
-		INT CURRENTOPTION = 0;
-			The creation of this variable gives a base condition to trigger the execution of the code 
+	
+			Variable gives a base condition to trigger the execution of the code 
 			inside of the preceding loop. 
-			
-		WHILE (CURRENTOPTION == 0){
+			}
 			Given the condition that currentOption was equal to ) the loop initiates a check sequence to 
 			test the user input and examine if it is valid. 
 		
-			STD::COUT<< "PLEASE CHOOSE FROM ONE OF THE FOLLOWING OPTIONS:\N(NUMERIC VALUES ONLY) "<< STD::ENDL;
 				The Screen print the above message and wait for the user to respond by offering input. 
 			
-			STD::COUT << " 1. SYSTEM INFORMATION\N 2. PCB SETTINGS\N 3. EXIT\N" << STD::ENDL;
 				At present these are the only options that a user can choose from. The users choice is then 
 				saved in the variable currentOption. 
 			
-			STD::CIN >> CURRENTOPTION;
 				currentOption is now equal to the users choice.				
 			
-			IF (CURRENTOPTION == 1){
 				The condition of currentOption being equal to 1 is checked. If they are equal
 				the following operations are preformed:
 				
-				CLEARSCREEN();
 					clearScreen is called to print a number of blank lines on the screen. 
-				RTYPE = "SYSTEM";
 					The property rType is then set the string value "system".
-				RETURN 1;
 					The getRequest method then terminates and returns the value 1. 
-			}
-			ELSE IF (CURRENTOPTION == 2){
 				If the former condition is not true the next condition, currentOption is equal to 2 in this case
 				is then checked. If they are equal the following operations are preformed:
 				
-				CLEARSCREEN();
 					clearScreen is called to print a number of blank lines on the screen. 
-				RTYPE = "PCB";
 					The property rType is then set the string value "PCB".
-				RETURN 2;
 					The getRequest method then terminates and returns the value 2. 				
 			}
-			ELSE IF (CURRENTOPTION == 3){
+			}
 				The next condition is checked if the previous two have failed. If this condition is true the 
 				following operations are preformed:
 				
-				STD::STRING CONFIRMEXIT = "";
 					The variable confirmExit is created to store user input. 
 					
-				STD::COUT << " PLEASE TYPE IN 'YES' TO CONFIRM EXIT OF OOSTRTA.\N PRESS ANY KEY TO RETURN TO HOME MENU\N\N" << STD::ENDL;
 					User is told what is required to oficially exit the program. 
 					
-				STD::CIN >> CONFIRMEXIT;
 					We store the input. 
 					
-				IF(CONFIRMEXIT == "YES"||CONFIRMEXIT == "YES"||CONFIRMEXIT == "YES"){
 					If their response is equal to Yes, yes, or YES, the program does the following:
 				
-					CLEARSCREEN();
 						clearScreen is called to print a number of blank lines on the screen.						
 					
-					STD::COUT <<"\N\N";
 						Prints out some space.
 						
-					//STD::COUT <<"TITO WAS GANGSTER";
 						Check statement. 
 					
-					RTYPE = "EXIT";
 						The property rType gets set to the string value exit 
 					
-					RETURN 77; //DUMMY VALUE I CAN CONFIDENTLY SAY WE WILL NOT REACH IN MENU OPTIONS
 						Returns 77 so that the condition in maip.cpp ( WHILE (GO!= 77) ) 
 				}
 				ELSE{
-					If none of the conditions have been met	we return the value 3 to remain in the loop.					
-					//STD::COUT <<"TITO WAS A GANGSTER";					
-					RETURN 3;
-				}
+					If none of the conditions have been met	we return the value 3 to remain in the loop.			
+			}
 			}
 			ELSE{
-				STD::COUT << "INVALID OPTION\N\N\N\N";
-					Other wise the user is informed of an invalid input response. 
-
+				Other wise the user is informed of an invalid input response. 
+				The currentOption variable is then set to 0 to remain loop that offers 
 				CURRENTOPTION =0;
-					The currentOption variable is then set to 0 to remain loop that offers 
-
 			}
 		}
 }
-
-
-
-VOID REQUEST::DISPLAYREQUEST(){
-    STD::COUT << RTYPE << STD::ENDL;
-}
-
-VOID REQUEST::CLEARSCREEN(){
-    STD::COUT << STD::STRING( 1000, '\N' );
-}
-
+    VOID DISPLAYREQUEST();
+		THIS METHOD 
+    VOID CLEARSCREEN();
 PRIVATE:
     STD::STRING RTYPE;

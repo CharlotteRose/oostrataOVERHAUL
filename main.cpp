@@ -12,8 +12,6 @@ int main(){
     while (go!= 77){
         go = newR.getRequest();
     };
-
-
  return 0;
 }
 
