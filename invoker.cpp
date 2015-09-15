@@ -3,19 +3,19 @@
 #include <iostream>
 
 invoker::invoker():
-    uChoice(0)
+	uChoice(0)
 {
 }
 invoker::~invoker()
 {
 }
 
-int invoker::evaluateRequest(int){
-
-
+int invoker::evaluateRequest(int)
+{
 }
 
-void invoker::showUchoice(){
-   std::cout << uChoice << std::endl;
+void invoker::showUchoice()
+{
+	std::cout << uChoice << std::endl;
 }
 

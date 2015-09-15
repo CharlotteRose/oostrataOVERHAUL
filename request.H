@@ -3,16 +3,17 @@
 #include <string>
 #include <iostream>
 
-class request{
+class request
+{
 
 public:
-    request();
-    ~request();
-    int getRequest();
-    void displayRequest();
-    void ClearScreen();
+	request();
+	~request();
+	int getRequest();
+	void displayRequest();
+	void ClearScreen();
 private:
-    std::string rType;
+	std::string rType;
 };
 
 

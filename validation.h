@@ -4,17 +4,18 @@
 
 // I am using uName to identify User input of type (name).
 
-class validation{
+class validation
+{
 
 public:
-    validation();
-    virtual ~validation();
-    std::string getString();
-    int getInt();
+	validation();
+	virtual ~validation();
+	std::string getString();
+	int getInt();
 
 private:
-    std::string uString;
-    int uInt;
+	std::string uString;
+	int uInt;
 };
 
-#endif // VALIDATION_H
+#endif // VALIDATION_H   //

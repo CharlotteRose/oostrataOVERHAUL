@@ -5,14 +5,16 @@
 
 void ClearScreen();
 
-int main(){
-    //std::cout <<"Hello World" << std::endl;
-    request newR;
-    int go = 0;
-    while (go!= 77){
-        go = newR.getRequest();
-    };
- return 0;
+int main()
+{
+	//std::cout <<"Hello World" << std::endl;
+	request newR;
+	int go = 0;
+	while (go!= 77)
+	{
+		go = newR.getRequest();
+	};
+	return 0;
 }
 
 
