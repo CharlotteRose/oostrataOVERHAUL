@@ -4,13 +4,16 @@ In the test files, we are mimicking instances of program use. When we have creat
 of the class(program), we then run it and feed it dummy values to check to the output. 
 If the output matches the expected values then the method passes the test. 
 
+// EXPLANATION OF OUTLINE 
+	//I will following the blocking used in the code but use words to describe
+	// the sequence of events to 
+
 	//Declaration of class   					//Implementations
 ___________________________________________________________________________________
 |Test Class:                                                                      |
 |public:                                                                          |
 |   									                                          |
-|  pcbTest();						    {pcbStruct* test = new pcbStruct;}        |
-|                                                                                 |
+|  pcbTest();						    { pcbStruct* test = new pcbStruct; }      |
 |	~pcbTest();							{}                                        |
 |                                                                                 |
 |	bool createsStruct();				                                          |

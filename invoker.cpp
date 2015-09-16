@@ -6,6 +6,7 @@ invoker::invoker():
 	uChoice(0)
 {
 }
+
 invoker::~invoker()
 {
 }

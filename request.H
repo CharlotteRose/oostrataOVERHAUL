@@ -5,7 +5,7 @@
 
 class request
 {
-
+//an instance of this object is created when the program begins
 public:
 	request();
 	~request();
