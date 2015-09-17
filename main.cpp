@@ -4,16 +4,6 @@
 
 int main()
 {
-	/*/std::cout <<"Hello World" << std::endl;
-	request newR; //new request is created
-	int go = 0;
-	while (go!= 77)
-	{
-		go = newR.getRequest(); //while the request does not return the value 77 we
-	};                          //continue to run the program
-
-	newR.~request();///////*/
-
 	runProgram myProgram;
 	myProgram.startProgram();
 	while (myProgram.getState()){

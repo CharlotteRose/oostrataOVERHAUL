@@ -3,6 +3,8 @@
 #include <iostream>
 #include "invoker.h"
 #include "request.H"
+
+
 //#include "handler.h"
 
 
@@ -13,6 +15,7 @@ public:
     ~runProgram();
     void startProgram();
     void manageProgram();
+    void switchTask(std::string);
     void killProgram();
     bool getState();
 

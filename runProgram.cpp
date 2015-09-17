@@ -1,4 +1,5 @@
 #include "runProgram.h"
+#include "pcbController.h"
 #include <string>
 
 runProgram::runProgram():
@@ -24,16 +25,35 @@ void runProgram::manageProgram(){
 	{
 		go = newR.getRequest(); //while the request does not return the value 77 we
                                 //continue to run the program
+        switchTask(newR.returnRequest());
+        //std::cout << "task check ";
 	};
 
 	newR.~request();
 	killProgram();
 }
 
+void runProgram::switchTask(std::string response){
+    if(response == "System"){
+            std::cout << "task check ";
+            //do stuff for uncreated menu thing
+    }
+    else if (response == "PCB"){
+        //std::cout << "task check ";
+            pcbController newPCB;
+            newPCB.showChoice();
+    }
+    else{
+       //std::cout << "A crash has occurred. Please contact you local administrator, build a bear workshop, or necromancer.\n\n";
+    }
+
+}
+
 void runProgram::killProgram(){
     if (programOn != 0 ){
         programOn = 0;
     }
+    runProgram();
 
 }
 

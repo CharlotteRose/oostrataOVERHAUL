@@ -11,7 +11,8 @@ public:
 	~request();
 	int getRequest();
 	void displayRequest();
-	void ClearScreen();
+    void ClearScreen();
+    std::string returnRequest();
 private:
 	std::string rType;
 };

@@ -88,3 +88,7 @@ void request::ClearScreen()
 {
 	std::cout << std::string( 1000, '\n' );
 }
+
+std::string request::returnRequest(){
+    return rType;
+}

@@ -43,6 +43,8 @@
 		<Unit filename="pcbStruct.h" />
 		<Unit filename="request.H" />
 		<Unit filename="request.cpp" />
+		<Unit filename="runProgram.cpp" />
+		<Unit filename="runProgram.h" />
 		<Unit filename="validation.cpp" />
 		<Unit filename="validation.h" />
 		<Extensions>

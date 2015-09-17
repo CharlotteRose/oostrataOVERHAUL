@@ -9,24 +9,23 @@ If the output matches the expected values then the method passes the test.
 	// the sequence of events to 
 
 	//Declaration of class   					//Implementations
-___________________________________________________________________________________
-|Test Class:                                                                      |
-|public:                                                                          |
-|   									                                          |
-|  pcbTest();						    { pcbStruct* test = new pcbStruct; }      |
-|	~pcbTest();							{}                                        |
-|                                                                                 |
-|	bool createsStruct();				                                          |
-|    bool canPopulate();                                                          |
-|    bool canDelete();                                                            |
-|    bool testName(std::string pName);                                            |
-|    bool testClass(int pClass);                                                  |
-|    bool testPriority(int pPriority);                                            |
-|    bool testMemory(int pMemory);                                                | 
-|    																			  |				
-|private:																		  |
-|    pcbStruct* testStruct														  |
-|_________________________________________________________________________________|
+_________________________________________________________________________________
+Test Class:                                                                    
+public:                                                                        
+   									                                        
+  pcbTest();						    { pcbStruct* test = new pcbStruct; }    
+	~pcbTest();							{}                                      
+                                                                               
+  bool createsStruct();				                                        
+  bool canPopulate();                                                          
+  bool canDelete();                                                            
+  bool testName(std::string pName);                                            
+  bool testClass(int pClass);                                                  
+  bool testPriority(int pPriority);                                            
+  bool testMemory(int pMemory);                                                
+private:																		  
+    pcbStruct* testStruct														  
+_________________________________________________________________________________
 	
 	
 Our entry point for contact with the PCB comes from the user electing to create a process.
