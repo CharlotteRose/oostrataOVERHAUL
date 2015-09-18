@@ -3,7 +3,6 @@
 #include "pcbStruct.h"
 #include <iostream>
 
-
 class pcbController{
 
 public:

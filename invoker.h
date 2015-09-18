@@ -1,5 +1,6 @@
 #ifndef INVOKER_H
 #define INVOKER_H
+#include <string>
 
 class invoker
 {
@@ -7,9 +8,7 @@ class invoker
 public:
 	invoker();
 	~invoker();
-	int evaluateRequest(int);
-	bool isSystemRequest(int);
-	bool isPCBRequest(int);
+	int evaluateRequest(std::string);
 	void showUchoice();
 
 private:
