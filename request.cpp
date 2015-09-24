@@ -6,6 +6,15 @@
 
 //an instance of this object is created when the program begins
 
+/****************************************
+
+    PLEASE NOTE THE STRUCTURE OF GET_REQUEST WILL CHANGE
+    AT PRESENT IT'S TOO LONG AND NEEDS A MAKEOVER.
+    THAT WILL COME..... ONE DAY.
+*****************************************/
+
+
+
 
 //creates instance with default string value None
 request::request():
@@ -26,6 +35,7 @@ int request::getRequest()
 		std::cout<< "Please choose from one of the following options:\n(Numeric values only) "<< std::endl;
 		std::cout << " 1. System Information\n 2. PCB Settings\n 3. Exit\n" << std::endl;
 		std::cin >> currentOption;
+
 		/*while (!isdigit(currentOption))                         //Compliments of stack overflow user Commander Bubble
 		{
 			std::cout << "ERROR, enter a number" << std::endl;
@@ -33,6 +43,8 @@ int request::getRequest()
 			std::cin.ignore(256,'\n');
 			std::cin >> currentOption                                                                     on;
 		}*/
+
+
 		if (currentOption == 1) // 1 stores the rType as system to pass to the invoker to be processed
 		{                       // the invoker will navigate use through system class selections
 			ClearScreen();

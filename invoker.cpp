@@ -13,10 +13,11 @@ invoker::~invoker()
 
 int invoker::evaluateRequest(std::string response)
 {
-    if( response == System ){
-        std::cout << "System options"
+    if( response == "System" ){
+        std::cout << "System options\n\n\n";
     }
-    std::cout << response;
+    else if ( response == )
+    //std::cout << response;
 }
 
 void invoker::showUchoice()
