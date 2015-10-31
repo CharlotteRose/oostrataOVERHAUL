@@ -6,6 +6,15 @@ to Operating Systems”” by Malcom G. Lane and James D. Mooney. Dr. Mooney was
 the late 80’s, he co-authored a book on operating systems. It came with a project manual and some accompanying
 software. The book and the manual are now out of print. While some text from the projects will be taken directly from
 the manual, I have heavily modified the project to be more modern and open-ended.
+
+*****************************************************
+Indentation of a requirement indicates completion.
+EX. 
+1. Blah Blah Blah
+	1. Blah Blah Blah
+*****************************************************
+
+
 Part 1: PCB Data Structure
 Your task is to create a data structure to represent a Process Control Block. Your PCB structure must have the following
 components:
@@ -20,6 +29,7 @@ a. There are “two” states that must be maintained in the PCB
 i. Is the process running, ready, or blocked?
 ii. Is the process suspended or not suspended?
 E. Memory – an integer to say how much memory the process needs.
+
 Part 2: Lists (Queues) of PCBs and Operations
 Now that you have the data structure, we need to do things with it. In an operating system, PCBs are commonly stored
 in Queues. In your program, you need to implement functionality for this. You have some choices on how to do this.

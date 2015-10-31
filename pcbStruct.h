@@ -25,3 +25,11 @@ private:
 	pcbStruct* next;
 };
 #endif // PCBSTRUCT_H
+
+
+/*
+States: 0- Ready
+        1- Running
+        2- Blocked
+        3- Suspended
+        4- Not Suspended */
