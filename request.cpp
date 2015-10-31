@@ -11,6 +11,7 @@
     PLEASE NOTE THE STRUCTURE OF GET_REQUEST WILL CHANGE
     AT PRESENT IT'S TOO LONG AND NEEDS A MAKEOVER.
     THAT WILL COME..... ONE DAY.
+
 *****************************************/
 
 
@@ -18,7 +19,7 @@
 
 //creates instance with default string value None
 request::request():
-	rType("None Set")
+	rType("None")
 {
 }
 
@@ -43,8 +44,6 @@ int request::getRequest()
 			std::cin.ignore(256,'\n');
 			std::cin >> currentOption                                                                     on;
 		}*/
-
-
 		if (currentOption == 1) // 1 stores the rType as system to pass to the invoker to be processed
 		{                       // the invoker will navigate use through system class selections
 			ClearScreen();

@@ -1,0 +1,101 @@
+CS 361 – Fall 2014
+OS Simulator – Assignment 1: Interface
+Due on Github and prepared for class demonstration / discussion on: September 3rd, 2014
+Note: The entire OS Simulator project is heavily influenced by the “Project Manual to Accompany “A Practical Approach
+to Operating Systems”” by Malcom G. Lane and James D. Mooney. Dr. Mooney was one of my professors at WVU. In
+the late 80’s, he co-authored a book on operating systems. It came with a project manual and some accompanying
+software. The book and the manual are now out of print. While some text from the projects will be taken directly from
+the manual, I have heavily modified the project to be more modern and open-ended.
+Part 1: Investigation / History
+Investigate the history of Operating System interfaces. The following links will help you to get started:
+http://www.meetgooya.com/History-of-UI-OS-Design
+http://www.webdesignerdepot.com/2009/03/operating-system-interface-design-between-1981-2009/
+http://www.guidebookgallery.org/index
+http://www.meetgooya.com/History-of-UI-OS-Design
+You are to turn in a small essay that covers the following ground:
+1. Give a brief history of OS interfaces.
+2. What makes a good interface? (Yes, this is an opinion question, but it is important for you to back up your
+statements.)
+3. Give the pros and cons of the major types of interface that you encountered.
+Please read widely and cite your sources.
+Part 2: Design and Programming
+For the majority of the semester, you will be constructing an Operating System simulator. You are free to name your
+operating system whatever you want (it must be acceptable in polite company) and to brand it however you wish.
+Your first task is to design and implement an interface and some basic functionality. You should do your best to design
+your code so that it is open to change. You may want to investigate Kent Beck’s Four Rules of Simple Design. Beck says
+that good code:
+1. Passes all tests (Hint: This assumes that you have tests, which you should)
+2. Is clear, expressive, and consistent (The code expresses every idea that we need to express)
+3. Duplicates no behavior or configuration (Says everything once and only once)
+4. Uses minimal methods, classes, and modules (Has to superfluous parts)
+Source: http://c2.com/cgi/wiki?XpSimplicityRules
+It is a mistake to try to make assumptions about the future of the code, because those assumptions may not be true. Do
+not try to predict the future.
+Since this is a simulator, it will be running on top of another operating system. You may choose your own
+development environment for this project (operating system, IDE, programming language, test framework).
+You are free to choose whatever interface you want for your system (Command Line, Menu, GUI), but it must display a
+welcome message and supply the following functionality/commands:
+1. Version: Display the software version number for your operating system.
+2. Date: Display or set the date
+You will need to see what facilities your underlying OS and programming language have for accessing the current
+date.
+3. Directory: Print a list of all of the files in the operating system’s directory.
+At this point, you may assume that there is only one directory for the OS. This command will take some research.
+Your simulator will have to access the underlying OS and request the directory information.
+4. Exit: Exit the simulator. You should ask the user if they are sure that they want to exit.
+5. Help: Display help information for each command. Should also be able to display a list of all commands present
+on the system.
+Note: Anytime an entire output from your system, such as a help file, will not fit on the screen entirely, you need
+to display the portion that fits on the screen and pause until the user asks for the rest (i.e. “press enter or click to
+continue”). This will require you to determine the screen size of your OS from the start.
+You will need to add and delete functionality in the future, so design your system to make this easy as possible.
+(Hint: Is there some sort of Design Pattern that is useful for commands?)
+For extra credit (1% on your entire project grade and may be turned in with any assignment submission) you may
+implement:
+1. History – displays a history of all of the commands a user used
+2. Batch files – run commands from a batch file or script
+3. Aliasing – allow users to map different command names (i.e. renaming Exit to Quit)
+Part 3: Documentation and Code Organization
+Code Requirements:
+It is expected that you use good programming style and practices that were discussed in previous classes and
+outside resources like Code Complete. You should use good naming and commenting practices. You should write the
+code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.
+User’s Manual
+Your Operating System should be accompanied by a User’s Manual which should contain at least the following sections:
+1. Table of Contents
+2. Overview of the OS
+3. Summary of Commands
+4. Detailed Description of Each Command
+a. Syntax (if applicable)
+b. Use
+c. Example
+d. Possible Errors
+5. Summary of Error Messages
+6. Index
+Write the User’s Manual so that your grandparents would be happy with it.
+Technical Support Manual
+A Technical Support Manual is also required for the project. This manual describes the program structure and how it
+operates. It should include the following information:
+1. Table of Contents
+2. Overview of Program
+a. Paragraph(s) about the system, including the principle elements.
+3. Program Structure
+a. UML class diagrams
+b. List of the contents in each file
+i. List the functions/data structures and a brief description of each
+4. Description of each function
+a. Prototype
+b. Parameters – data type, description
+c. Return value, including returns when an error is encountered
+d. Description of what the function does
+5. Description of Data Structures
+a. Use
+b. Attributes – list including data types and brief description
+6. Global Variables (if any)
+a. List including data types and description
+7. Cross References
+a. For each function, which functions does it call, and which functions call it?
+8. Index
+This manual is intended for technical staff who must maintain your OS. Ask the question: “would I be happy with the
+given responsibility to maintain this program using this manual?”
+We will build on these two manuals as the project progresses.

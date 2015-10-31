@@ -1,0 +1,24 @@
+Operating Systems Project – Part 4 – Memory Management
+In this assignment, you will make your OS Simulator handle the simple Memory Management techniques discussed in
+class. We will not attempt to simulate paging.
+Here is the premise:
+Your Operating System only has 1024 blocks of memory for processes to use. If a process wants to run, it has to see if
+there is enough available memory to do so. There are four different methods of allocating memory to a process: First
+Fit, Next Fit, Best Fit and Worst Fit. You will be implementing these.
+As you run processes, the memory gets broken up into small pieces, which, as discussed in class, can cause problems. If
+there isn’t enough memory, you can’t schedule that process until there is enough memory to do so. When this happens,
+there are two methods that you can use to help. These are Coalescing and Compaction. You should always try
+Coalescing your memory before you try Compacting it. Sometimes these methods work and at other times, there is still
+not enough room for your next process. For the basic version of this project, if Coalescing and Compaction do not make
+enough room you can assume that your process scheduler will wait until there is enough free memory to allocate the
+next process (this should be factored into the Turnaround time calculations for your schedulers). For extra credit, you
+can modify your scheduler to choose the next process in the Ready Queue that will fit into the available memory and
+bump it to the front of the line. (Note: You should only run Coalescing when you don’t have enough memory for a
+process. And you should only run Compaction when Coalescing does not produce enough memory for the process.
+Only then should you run your extra credit modification.)
+You should also provide an easily understandable way to display the amount of memory taken by each process and how
+much available memory there is. Your method of display should clearly demonstrate where there are holes in the
+memory between processes (the whole reason we deal with Coalescing and Compaction). When running the Coalescing
+and Compaction algorithms, you should clearly display a before and after picture for each operation. It is your choice if
+you wish to display these on the screen or if you wish to add them to the files produced by your scheduling methods
+from the previous assignment.

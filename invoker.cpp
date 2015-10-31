@@ -16,7 +16,10 @@ int invoker::evaluateRequest(std::string response)
     if( response == "System" ){
         std::cout << "System options\n\n\n";
     }
-    else if ( response == )
+    else if ( response == "")
+    {
+        std::cout<<"Thank you" <<std::endl;
+    }
     //std::cout << response;
 }
 
