@@ -10,52 +10,55 @@ the manual, I have heavily modified the project to be more modern and open-ended
 *****************************************************
 Indentation of a requirement indicates completion.
 EX. 
-1. Blah Blah Blah
-	1. Blah Blah Blah
+1. Blah Blah Blah //NOT complete 
+	1. Blah Blah Blah //complete :)
 *****************************************************
 
 
 Part 1: PCB Data Structure
 Your task is to create a data structure to represent a Process Control Block. Your PCB structure must have the following
 components:
-A. Process Name – string
-B. Process Class – Identifies the process as an Application or System type
-a. Can represent this however you want, int, char, bool, etc
-b. You may want to use a #define to make your code more clear if using C++
-C. Priority – integer that will contain values of -127 to +128
-a. You will need to check for valid priorities later in the program
-D. State – the current state of the process
-a. There are “two” states that must be maintained in the PCB
-i. Is the process running, ready, or blocked?
-ii. Is the process suspended or not suspended?
-E. Memory – an integer to say how much memory the process needs.
+	Aa. Process Name – string
+	B. Process Class – Identifies the process as an Application or System type
+		a. Can represent this however you want, int, char, bool, etc
+		b. You may want to use a #define to make your code more clear if using C++
+	C. Priority – integer that will contain values of -127 to +128
+		a. You will need to check for valid priorities later in the program
+	D. State – the current state of the process
+		a. There are “two” states that must be maintained in the PCB
+			i. Is the process running, ready, or blocked?
+			ii. Is the process suspended or not suspended?
+	E. Memory – an integer to say how much memory the process needs.
 
 Part 2: Lists (Queues) of PCBs and Operations
 Now that you have the data structure, we need to do things with it. In an operating system, PCBs are commonly stored
 in Queues. In your program, you need to implement functionality for this. You have some choices on how to do this.
 For instance, you could:
-A. Have a linked list of PCBs
-a. Each PCB contains a pointer to the previous and next PCB structure
-B. Have a linked list of queue nodes that point to PCBs.
-a. Build a queue node that will contain:
-i. A pointer to the next queue node
-ii. A pointer to the previous queue node
-iii. A pointer to the PCB (The PCB has no pointers in it)
-C. Think up a third way.
+	A. Have a linked list of PCBs  //the method I pursued 
+		a. Each PCB contains a pointer to the previous and next PCB structure
+	B. Have a linked list of queue nodes that point to PCBs.
+		a. Build a queue node that will contain:
+			i. A pointer to the next queue node
+			ii. A pointer to the previous queue node
+			iii. A pointer to the PCB (The PCB has no pointers in it)
+	C. Think up a third way.
+
 Next, you need to decide how many Queues that you need to have. There are options here as well.
-A. 2 queues: Ready and Blocked
-a. Ready and Blocked queues will each hold processes in their respective state, regardless of
-suspended or not suspended.
-B. 4 queues: Ready, blocked, suspended ready, suspended blocked.
-C. Think up a third way.
+	A. 2 queues: Ready and Blocked
+		a. Ready and Blocked queues will each hold processes in their respective state, regardless of
+		suspended or not suspended.
+	B. 4 queues: Ready, blocked, suspended ready, suspended blocked.
+		C. Think up a third way.
+
 PCB Queues:
 You will need to create a data structure for the queue itself. Things you will need:
-1. Number of nodes in the queue
-2. Pointer to the head of the queue
-3. Pointers to the Tail (end) of the Queue
-a. The head and tail pointers will either be to the PCBs themselves or to Queue nodes, depending on how
-you choose to implement your queues.
-4. Items will be inserted into the queues in a FIFO (First In, First Out) ordering (FOR NOW)
+	1. Number of nodes in the queue
+	2. Pointer to the head of the queue
+	3. Pointers to the Tail (end) of the Queue
+		a. The head and tail pointers will either be to the PCBs themselves or to Queue nodes, depending on how
+		you choose to implement your queues.
+	4. Items will be inserted into the queues in a FIFO (First In, First Out) ordering (FOR NOW)
+
 PCB Functions:
 You will need to create some functions to work with your PCBs.
 1. AllocatePCB
