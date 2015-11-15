@@ -1,6 +1,7 @@
 Operating Systems Project – Part 3 – Process Scheduling
 In this assignment, you will make your OS Simulator handle the Process Scheduling methods discussed in class. For
 simplicity, we will not worry about “User Input” while our Processes are running. (You are welcome)
+
 Step 1: Remove the following User Commands from your program:
 CreatePCB
 DeletePCB
@@ -8,6 +9,7 @@ Block
 Unblock
 If you do not wish to delete them, you may comment them out, but they should not be present in your help menu and
 they should not be valid commands for the user.
+
 Step 2: Create functionality to read process information from a file
 Your schedulers will get their process information from a file. You should create a functionality that prompts the user
 for a filename and reads process information from the file. The scheduling methods (described below) will determine
@@ -38,6 +40,7 @@ understanding of the project. That’s why you will write two versions of Shorte
 as a full-knowledge scheduler, but it is better to do it as an Incomplete Knowledge Scheduler.
 Incomplete Knowledge Schedulers will need to read each line of the file and deal with that Process’ information before
 moving on to the next Process. They also need to take the time of arrival into consideration.
+
 Step 3: Create and Implement Full Knowledge Shortest Job First
 You should create a new command: SJF that prompts the user for a filename (as usual with your OS, you should
 assume the user is an idiot and perform some error checking to see if the file is open) and uses the information in the
@@ -51,6 +54,8 @@ command, the Ready Queue should be empty and there should be nothing running (If
 have an always on process like “System” or “OS”, then it is okay for it to remain) You should then print out a list of the
 Process Names in the order that they were completed, the Total Time to Completion (for the whole Ready Queue, not
 each job individually) and the Average Turnaround time. (See the textbook for how to calculate this if you’re not sure)
+
+
 Step 4: Implement the Incomplete Knowledge Schedulers
 The biggest difference here is that you should implement the schedulers as if you don’t know the full schedule before
 you start. (At least in theory, in reality you’ll have an input file that lists all jobs.) This is mainly done with the Time of

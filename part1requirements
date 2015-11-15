@@ -6,18 +6,21 @@ to Operating Systems”” by Malcom G. Lane and James D. Mooney. Dr. Mooney was
 the late 80’s, he co-authored a book on operating systems. It came with a project manual and some accompanying
 software. The book and the manual are now out of print. While some text from the projects will be taken directly from
 the manual, I have heavily modified the project to be more modern and open-ended.
+
 Part 1: Investigation / History
 Investigate the history of Operating System interfaces. The following links will help you to get started:
 http://www.meetgooya.com/History-of-UI-OS-Design
 http://www.webdesignerdepot.com/2009/03/operating-system-interface-design-between-1981-2009/
 http://www.guidebookgallery.org/index
 http://www.meetgooya.com/History-of-UI-OS-Design
+
 You are to turn in a small essay that covers the following ground:
 1. Give a brief history of OS interfaces.
 2. What makes a good interface? (Yes, this is an opinion question, but it is important for you to back up your
 statements.)
 3. Give the pros and cons of the major types of interface that you encountered.
 Please read widely and cite your sources.
+
 Part 2: Design and Programming
 For the majority of the semester, you will be constructing an Operating System simulator. You are free to name your
 operating system whatever you want (it must be acceptable in polite company) and to brand it however you wish.
@@ -31,10 +34,13 @@ that good code:
 Source: http://c2.com/cgi/wiki?XpSimplicityRules
 It is a mistake to try to make assumptions about the future of the code, because those assumptions may not be true. Do
 not try to predict the future.
+
 Since this is a simulator, it will be running on top of another operating system. You may choose your own
 development environment for this project (operating system, IDE, programming language, test framework).
+
 You are free to choose whatever interface you want for your system (Command Line, Menu, GUI), but it must display a
 welcome message and supply the following functionality/commands:
+
 1. Version: Display the software version number for your operating system.
 2. Date: Display or set the date
 You will need to see what facilities your underlying OS and programming language have for accessing the current
@@ -50,6 +56,7 @@ to display the portion that fits on the screen and pause until the user asks for
 continue”). This will require you to determine the screen size of your OS from the start.
 You will need to add and delete functionality in the future, so design your system to make this easy as possible.
 (Hint: Is there some sort of Design Pattern that is useful for commands?)
+
 For extra credit (1% on your entire project grade and may be turned in with any assignment submission) you may
 implement:
 1. History – displays a history of all of the commands a user used

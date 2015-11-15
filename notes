@@ -1,0 +1,10 @@
+Main creates an instance of runProgram. 
+runProgram calls startProgram. This starts the program
+while the state of the Program is true we execute manageProgram. 
+manageProgram creates a new instance of the request class.
+
+
+
+Each queue for the PCB is handled inside of the pcbController file. 
+
+There are two queues that are created namely, Ready and Blocked.  
