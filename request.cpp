@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-//an instance of this object is created when the program begins
+//an instance of this object is created in manageProgram
 
 /****************************************
 
@@ -23,6 +23,7 @@ request::request():
 {
 }
 
+//destructor
 request::~request()
 {
 }
@@ -30,30 +31,26 @@ request::~request()
 //The program walks the user through selecting a menu option
 int request::getRequest()
 {
-	int currentOption = 0;
-	while (currentOption == 0) //set condition to begin loop
-	{
+	int currentOption = 0;  /*dummy value to initialize user choice variable
+                            currentOption is update according to user choice  */
+
+	while (currentOption == 0){ //set condition to begin loop
 		std::cout<< "Please choose from one of the following options:\n(Numeric values only) "<< std::endl;
 		std::cout << " 1. System Information\n 2. PCB Settings\n 3. Exit\n" << std::endl;
 		std::cin >> currentOption;
 
-		/*while (!isdigit(currentOption))                         //Compliments of stack overflow user Commander Bubble
-		{
-			std::cout << "ERROR, enter a number" << std::endl;
-			std::cin.clear();
-			std::cin.ignore(256,'\n');
-			std::cin >> currentOption                                                                     on;
-		}*/
-		if (currentOption == 1) // 1 stores the rType as system to pass to the invoker to be processed
-		{                       // the invoker will navigate use through system class selections
+		if (currentOption == 1){ /* 1 stores the rType as system to pass to
+                                 the invoker to be processed the invoker will
+                                 navigate use through system class selections */
 			ClearScreen();
 			rType = "System";
 			return 1;
 		}
-		else if (currentOption == 2)    // option 2 enters the pcb area of the system
-		{                               // for invoker to offer/process all/any options for the
-			ClearScreen();              // pcb class
-			rType = "PCB";
+		else if (currentOption == 2){    /* option 2 enters the pcb area of the system
+		                                for invoker to offer/process all/any options for the
+                                        pcb class*/
+            ClearScreen();              //adds spacing
+			rType = "PCB";              //rType is modified
 			return 2;
 		}
 		else if (currentOption == 3)       //offers option to exit the "system"
@@ -66,23 +63,26 @@ int request::getRequest()
 				ClearScreen();
 				std::cout << "\n\n\n\n";
 				//std::cout <<"tito was gangster";
+				rType = "exit";
 				return 77; //dummy value I can confidently say we will not reach in menu options
 			}
 			else
 			{
 				//std::cout <<"tito was a gangster";
-				rType = "exit";
 				return 3;
 			}
 		}
-		else if(!isdigit(currentOption)){       //if the user enters anything else we
+//This else if was yanked from stack overflow user Commander Bubble
+		else if(!isdigit(currentOption)){   /*if the user enters anything other than a number
+                                            this delightful block of code will generate an
+                                            error message*/
             std::cout << "ERROR, please enter a valid response." << std::endl;
 			std::cin.clear();
 			std::cin.ignore(256,'\n');
             std::cout << "\n\n\n\n";
             currentOption =0;
 		}
-		else
+		else    //if they enter some random number
 		{
 			std::cout << "Invalid Option\n\n\n\n";
 			currentOption =0;

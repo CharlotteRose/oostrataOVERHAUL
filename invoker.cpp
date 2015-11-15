@@ -16,9 +16,13 @@ int invoker::evaluateRequest(std::string response)
     if( response == "System" ){
         std::cout << "System options\n\n\n";
     }
-    else if ( response == "")
+    else if ( response == "PCB")
     {
         std::cout<<"Thank you" <<std::endl;
+    }
+    else if ( response == "exit"){
+        std::cout << "Thank you for choosing the no bells, no whistles, no bs OS oostra." <<
+        std::endl;
     }
     //std::cout << response;
 }
