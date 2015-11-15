@@ -52,7 +52,7 @@ Next, you need to decide how many Queues that you need to have. There are option
 
 PCB Queues:
 You will need to create a data structure for the queue itself. Things you will need:
-	1. Number of nodes in the queue
+	1. Number of nodes in the queue	//
 	2. Pointer to the head of the queue
 	3. Pointers to the Tail (end) of the Queue
 		a. The head and tail pointers will either be to the PCBs themselves or to Queue nodes, depending on how
@@ -62,41 +62,42 @@ You will need to create a data structure for the queue itself. Things you will n
 PCB Functions:
 You will need to create some functions to work with your PCBs.
 1. AllocatePCB
-a. Creates memory for a new PCB
-b. Takes no parameters
-c. Returns a pointer to the new PCB, or NULL If there is an error.
+	a. Creates memory for a new PCB
+	b. Takes no parameters
+	c. Returns a pointer to the new PCB, or NULL If there is an error.
 2. FreePCB
-a. Frees all memory associated with a PCB
-b. Parameter is a PCB pointer
-c. Can either have no return, or return an error code
+	a. Frees all memory associated with a PCB
+	b. Parameter is a PCB pointer
+	c. Can either have no return, or return an error code
 3. SetupPCB
-a. Initializes a PCB’s content (name, priority, class)
-b. Parameters are: Name, Priority, Class
-c. Should check that the parameters are valid (See FindPCB to make sure there isn’t a PCB with that name
-already)
-d. Calls the PCBAllocate function to create the PCB’s memory
-e. Sets the name, priority, and class based on your parameters.
-f. Set state to ready, not suspended (FOR NOW)
+	a. Initializes a PCB’s content (name, priority, class)
+	b. Parameters are: Name, Priority, Class
+	c. Should check that the parameters are valid (See FindPCB to make sure there isn’t a PCB with that name
+	lready)
+	d. Calls the PCBAllocate function to create the PCB’s memory
+	e. Sets the name, priority, and class based on your parameters.
+	f. Set state to ready, not suspended (FOR NOW)
 4. FindPCB
-a. Searches all queues for PCB with a given name
-b. Parameters: Process Name
-c. Should search all queues and all states to find the PCB with that name.
-d. Returns a pointer to the PCB if found, NULL if not found
+	a. Searches all queues for PCB with a given name
+	b. Parameters: Process Name
+	c. Should search all queues and all states to find the PCB with that name.
+	d. Returns a pointer to the PCB if found, NULL if not found
 5. InsertPCB
-a. Parameters:
-i. Queue – Which Queue to Insert Into
-1. OR you can determine this automatically by making your function check the process’s
-state.
-ii. PCB* - pointer to the PCB that’s being inserted
-b. Inserts the given PCB into the specified queue
-i. Using the FIFO order (basically insert at the end) (FOR NOW)
-c. Can return nothing or an error code
+	a. Parameters:
+		i. Queue – Which Queue to Insert Into
+			1. OR you can determine this automatically by making your function check the process’s
+			state.
+		ii. PCB* - pointer to the PCB that’s being inserted
+	b. Inserts the given PCB into the specified queue
+		i. Using the FIFO order (basically insert at the end) (FOR NOW)
+	c. Can return nothing or an error code
 6. RemovePCB
-a. Removes the PCB from the queue it’s currently in
-b. Parameters: PCB Pointer
-c. Use FindPCB to find the PCB and removes the PCB from whatever Queue it’s in.
-d. Does not free the memory from the PCB and does not delete it.
-e. Can either return nothing or an error code
+	a. Removes the PCB from the queue it’s currently in
+	b. Parameters: PCB Pointer
+	c. Use FindPCB to find the PCB and removes the PCB from whatever Queue it’s in.
+	d. Does not free the memory from the PCB and does not delete it.
+	e. Can either return nothing or an error code
+
 The Lifetime of a Process:
 1. Operating System needs to create a process. So it calls SetupPCB with process info.
 2. SetupPCB calls FindPCB to verify that no process has the same name.
@@ -106,72 +107,71 @@ The Lifetime of a Process:
 6. The process runs for awhile and then the Operating System decides that the process needs terminated.
 Operating System calls RemovePCB to remove the PCB from the Queue that it’s currently in.
 7. Operating System calls FreePCB to free the memory held by the PCB, including the PCB itself.
+
 Now that the “Operating System” can do things with the PCBs, we have to let the user do things. Implement the
 following commands:
 User Commands:
+//BLUE MEANS NOT IN FUTURE VERSIONS 
 1. CreatePCB
-a. Allocates and sets up a new PCB and inserts it into the Ready Queue
-b. Need to get the following info from the user:
-i. Process Name
-ii. Class
-iii. Priority
-c. Must check the validity of the above and display an appropriate error message if one is invalid.
-i. Process name must be unique
-ii. Class must be valid.
-iii. Priority must be valid
-d. Calls the SetupPCB function to setup the PCB then calls the InsertPCB function to insert it into the ready
-queue.
+	a. Allocates and sets up a new PCB and inserts it into the Ready Queue
+	b. Need to get the following info from the user:
+		i. Process Name
+		ii. Class
+		iii. Priority
+	c. Must check the validity of the above and display an appropriate error message if one is invalid.
+		i. Process name must be unique
+		ii. Class must be valid.
+		iii. Priority must be valid
+	d. Calls the SetupPCB function to setup the PCB then calls the InsertPCB function to insert it into the ready
+	queue.
 2. DeletePCB
-a. Removes an existing PCB from its queue and frees its memory
-b. Get the PCB name from the user
-i. Check that the PCB exists
-c. Calls the removePCB function to remove the PCB from its queue, and then calls freePCB to free the
-PCB’s memory.
-d. Display success or failure message
+	a. Removes an existing PCB from its queue and frees its memory
+	b. Get the PCB name from the user
+		i. Check that the PCB exists
+	c. Calls the removePCB function to remove the PCB from its queue, and then calls freePCB to free the
+	PCB’s memory.
+	d. Display success or failure message
 3. Block
-a. Get PCB name from the user- check that the PCB with that name exists
-b. Places the process (PCB) in the blocked state
-c. Does not change its suspended status
-d. Should remove the process from the ready queue (by calling remove_PCB) and place the process in the
-blocked queue (by calling insert_PCB)
-e. Display appropriate error or success message
+	a. Get PCB name from the user- check that the PCB with that name exists
+	b. Places the process (PCB) in the blocked state
+	c. Does not change its suspended status
+	d. Should remove the process from the ready queue (by calling remove_PCB) and place the process in the
+	blocked queue (by calling insert_PCB)
+	e. Display appropriate error or success message
 4. Unblock
-a. Get process name from the user
-b. Places the process (PCB) in the ready state
-c. Does not change its suspended status
-d. Should remove the process from the blocked queue and place the process in the ready queue, if
-necessary
-e. Display appropriate error or success message
+	a. Get process name from the user
+	b. Places the process (PCB) in the ready state
+	c. Does not change its suspended status
+	d. Should remove the process from the blocked queue and place the process in the ready queue, if
+	necessary
+	e. Display appropriate error or success message
 5. Suspend
-a. Get PCB name from the user
-b. Puts the PCB in the suspended state
-c. Might require changing queues (from ready to suspended ready, for example) if 4 queues are used
-d. Display appropriate error or success message.
+	a. Get PCB name from the user
+	b. Puts the PCB in the suspended state
+	c. Might require changing queues (from ready to suspended ready, for example) if 4 queues are used
+	d. Display appropriate error or success message.
 6. Resume
-a. Puts process in not suspended state
-b. Might require changing queues
-c. Display appropriate error or success message.
+	a. Puts process in not suspended state
+	b. Might require changing queues
+	c. Display appropriate error or success message.
 7. Set priority
-a. Get PCB name and new priority from user
-b. Check that the PCB exists
-c. Check that the new priority is valid
-d. Display appropriate error or success message.
+	a. Get PCB name and new priority from user
+	b. Check that the PCB exists
+	c. Check that the new priority is valid
+	d. Display appropriate error or success message.
 8. Show PCB
-a. Get PCB name from the user
-b. Display all information about the PCB (except pointers) in “attractive” format
-c. Display error if PCB doesn’t exist.
+	a. Get PCB name from the user
+	b. Display all information about the PCB (except pointers) in “attractive” format
+	c. Display error if PCB doesn’t exist.
 9. Show all
-a. Show information for all PCB’s in all queues, in any convenient order
-b. At a minimum, must show process name, state, suspended status, and priority.
-c. Limit information about a single PCB to a single line
-d. Must fit on a single screen, or use a mechanism that allows the user to continue on once the screen is
-full.
+	a. Show information for all PCB’s in all queues, in any convenient order
+	b. At a minimum, must show process name, state, suspended status, and priority.
+	c. Limit information about a single PCB to a single line
+	d. Must fit on a single screen, or use a mechanism that allows the user to continue on once the screen is
+	full.
 10. Show ready
-a. Show processes in the ready state
-b. Show same info in same format as the show all command
-c. Must show the processes in the order they exist in the queue
+	a. Show processes in the ready state
+	b. Show same info in same format as the show all command
+	c. Must show the processes in the order they exist in the queue
 11. Show blocked
-a. Same as show ready, except show the processes in the blocked state
-Part 2: Documentation and Code Organization
-Use the same code standards that were discussed in the previous assignment. Add all of the new functionality to your
-User’s Manual and Technical Support Manual.
+	a. Same as show ready, except show the processes in the blocked state
