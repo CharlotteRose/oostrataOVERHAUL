@@ -10,16 +10,18 @@
 >If information is needed validation receives request and runs
 */
 
-void fullscreen();
+//void fullscreen();
+
+
 
 int main()
 {
 //    fullscreen();
-	runProgram myProgram;
+	runProgram myProgram;  //creates instance of runProgram class to start simulator
 	//myProgram.testProgram();
-	myProgram.startProgram();
-	while (myProgram.getState()){
-        myProgram.manageProgram();
+	myProgram.startProgram(); //calls start program to run the simulator
+	while (myProgram.getState()){  //reads the value getState which is updated in the request class
+        myProgram.manageProgram();  //while the getState value is true manageProgram is ran
 	}
 	return 0;
 }

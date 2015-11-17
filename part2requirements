@@ -1,19 +1,9 @@
 CS 361 – Fall 2014
 OS Simulator – Assignment 2: Process Control Blocks
-Due on Github and prepared for class demonstration / discussion on: September 12th, 2014
-Note: The entire OS Simulator project is heavily influenced by the “Project Manual to Accompany “A Practical Approach
-to Operating Systems”” by Malcom G. Lane and James D. Mooney. Dr. Mooney was one of my professors at WVU. In
-the late 80’s, he co-authored a book on operating systems. It came with a project manual and some accompanying
-software. The book and the manual are now out of print. While some text from the projects will be taken directly from
-the manual, I have heavily modified the project to be more modern and open-ended.
 
 *****************************************************
-Indentation of a requirement indicates completion.
-EX. 
-1. Blah Blah Blah //NOT complete 
-	1. Blah Blah Blah //complete :)
+//comment block :D
 *****************************************************
-
 
 Part 1: PCB Data Structure
 Your task is to create a data structure to represent a Process Control Block. Your PCB structure must have the following
@@ -36,12 +26,6 @@ in Queues. In your program, you need to implement functionality for this. You ha
 For instance, you could:
 	A. Have a linked list of PCBs  //the method I pursued 
 		a. Each PCB contains a pointer to the previous and next PCB structure
-	B. Have a linked list of queue nodes that point to PCBs.
-		a. Build a queue node that will contain:
-			i. A pointer to the next queue node
-			ii. A pointer to the previous queue node
-			iii. A pointer to the PCB (The PCB has no pointers in it)
-	C. Think up a third way.
 
 Next, you need to decide how many Queues that you need to have. There are options here as well.
 	A. 2 queues: Ready and Blocked
@@ -111,40 +95,6 @@ Operating System calls RemovePCB to remove the PCB from the Queue that it’s cu
 Now that the “Operating System” can do things with the PCBs, we have to let the user do things. Implement the
 following commands:
 User Commands:
-//BLUE MEANS NOT IN FUTURE VERSIONS 
-1. CreatePCB
-	a. Allocates and sets up a new PCB and inserts it into the Ready Queue
-	b. Need to get the following info from the user:
-		i. Process Name
-		ii. Class
-		iii. Priority
-	c. Must check the validity of the above and display an appropriate error message if one is invalid.
-		i. Process name must be unique
-		ii. Class must be valid.
-		iii. Priority must be valid
-	d. Calls the SetupPCB function to setup the PCB then calls the InsertPCB function to insert it into the ready
-	queue.
-2. DeletePCB
-	a. Removes an existing PCB from its queue and frees its memory
-	b. Get the PCB name from the user
-		i. Check that the PCB exists
-	c. Calls the removePCB function to remove the PCB from its queue, and then calls freePCB to free the
-	PCB’s memory.
-	d. Display success or failure message
-3. Block
-	a. Get PCB name from the user- check that the PCB with that name exists
-	b. Places the process (PCB) in the blocked state
-	c. Does not change its suspended status
-	d. Should remove the process from the ready queue (by calling remove_PCB) and place the process in the
-	blocked queue (by calling insert_PCB)
-	e. Display appropriate error or success message
-4. Unblock
-	a. Get process name from the user
-	b. Places the process (PCB) in the ready state
-	c. Does not change its suspended status
-	d. Should remove the process from the blocked queue and place the process in the ready queue, if
-	necessary
-	e. Display appropriate error or success message
 5. Suspend
 	a. Get PCB name from the user
 	b. Puts the PCB in the suspended state
