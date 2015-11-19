@@ -1,6 +1,5 @@
 Operating Systems Project – Part 3 – Process Scheduling
-In this assignment, you will make your OS Simulator handle the Process Scheduling methods discussed in class. For
-simplicity, we will not worry about “User Input” while our Processes are running. (You are welcome)
+
 
 Step 1: Remove the following User Commands from your program:
 CreatePCB
@@ -29,9 +28,7 @@ A – Application
 S – System
 Example Process line:
 TestProcess A 24 128 500 15 25
-Note: You can assume that the file will be sorted by Time of Arrival, from earliest to latest. This attribute will be used
-in several of your scheduling methods. Assume that your schedulers are starting at time 0. (You’re welcome once
-again. I almost made you write Quicksort to do it yourself)
+Note: You can assume that the file will be sorted by Time of Arrival, from earliest to latest. 
 You will be responsible for creating seven scheduling methods. These are in two categories: Full Knowledge Schedulers
 and Incomplete Knowledge Schedulers. Full Knowledge Schedulers can read the entire file beforehand and can ignore
 the time of arrival attribute.
