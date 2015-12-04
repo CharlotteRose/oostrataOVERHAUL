@@ -18,7 +18,11 @@ int invoker::evaluateRequest(std::string response)
     }
     else if ( response == "PCB")
     {
-        std::cout<<"Thank you" <<std::endl;
+        //create and instance of the pcbController class
+        pcbController pcbAccessPoint;
+        pcbAccessPoint.showChoice();
+        pcbAccessPoint.allocatePCB();
+
     }
     else if ( response == "exit"){
         std::cout << "Thank you for choosing the no bells, no whistles, no bs OS oostra." <<
